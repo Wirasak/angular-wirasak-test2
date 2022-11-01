@@ -1,6 +1,429 @@
 /**
  * Schedule datasource
  */
+export let scheduleConstraintWSOData: Record<string, any>[] = [
+  
+    {
+      ID:191,
+      Name:"MGWF_06A",
+      StartTime:"2024-11-24",
+      EndTime:"2025-01-02",
+      Description:"DPI= 2.36,NPV=18.3, VC=14.3",
+      RigName:"Krathong (J)",
+      ScenarioID:388,
+      ConsultantID:2
+    },
+    {
+      ID:249,
+      Name:"PAWL_11A",
+      StartTime:"2026-07-10",
+      EndTime:"2026-09-20",
+      Description:"DPI= 2.79,NPV=39.3, VC=32.7",
+      RigName:"Krathong (J)",
+      ScenarioID:388,
+      ConsultantID:2
+    },
+    {
+      ID:405,
+      Name:"NPWJ_10B",
+      StartTime:"2024-02-10",
+      EndTime:"2024-04-22",
+      Description:"DPI= 2.27,NPV=25.2, VC=19.2",
+      RigName:"Krathong (J)",
+      ScenarioID:388,
+      ConsultantID:2
+    },
+    {
+      ID:631,
+      Name:"PAWM_06C",
+      StartTime:"2025-09-22",
+      EndTime:"2025-11-03",
+      Description:"DPI= 2.11,NPV=14.9, VC=10.9",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:672,
+      Name:"PAWP_06B",
+      StartTime:"2026-05-25",
+      EndTime:"2026-07-06",
+      Description:"DPI= 3.41,NPV=29.7, VC=26.0",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:863,
+      Name:"NPWE_04D",
+      StartTime:"2025-08-24",
+      EndTime:"2025-09-21",
+      Description:"DPI= 1.34,NPV=2.5, VC=0.3",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1153,
+      Name:"MGWC_09A",
+      StartTime:"2024-05-03",
+      EndTime:"2024-07-11",
+      Description:"DPI= 2.49,NPV=36.0, VC=28.8",
+      RigName:"Krathong (J)",
+      ScenarioID:388,
+      ConsultantID:2
+    },
+    {
+      ID:1169,
+      Name:"MGWG_05A",
+      StartTime:"2027-03-01",
+      EndTime:"2027-04-05",
+      Description:"DPI= 2.08,NPV=10.6, VC=7.7",
+      RigName:"Krathong (J)",
+      ScenarioID:388,
+      ConsultantID:2
+    },
+    {
+      ID:1173,
+      Name:"PAD-14RA",
+      StartTime:"2027-07-14",
+      EndTime:"2027-10-08",
+      Description:"DPI= 1.94,NPV=17.7, VC=12.0",
+      RigName:"Krathong (J)",
+      ScenarioID:388,
+      ConsultantID:2
+    },
+    {
+      ID:1178,
+      Name:"PAD-56",
+      StartTime:"2022-08-22",
+      EndTime:"2022-11-22",
+      Description:"DPI= 1.80,NPV=52.4, VC=32.7",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1669,
+      Name:"MGWI",
+      StartTime:"2022-01-15",
+      EndTime:"2022-06-10",
+      Description:"DPI= 4.49,NPV=311.6, VC=284.8",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1672,
+      Name:"MGD-21",
+      StartTime:"2027-08-22",
+      EndTime:"2027-12-18",
+      Description:"DPI= 2.74,NPV=93.7, VC=77.5",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1673,
+      Name:"MGD-38",
+      StartTime:"2027-04-01",
+      EndTime:"2027-08-14",
+      Description:"DPI= 2.94,NPV=117.9, VC=99.7",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1674,
+      Name:"MGD-03",
+      StartTime:"2024-02-04",
+      EndTime:"2024-05-15",
+      Description:"DPI= 2.52,NPV=92.9, VC=74.6",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1677,
+      Name:"MGD-10",
+      StartTime:"2025-11-24",
+      EndTime:"2026-03-17",
+      Description:"DPI= 2.19,NPV=69.5, VC=51.9",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1681,
+      Name:"MGD-16",
+      StartTime:"2024-12-24",
+      EndTime:"2025-04-28",
+      Description:"DPI= 2.08,NPV=77.3, VC=55.8",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1688,
+      Name:"MGD-25",
+      StartTime:"2029-05-23",
+      EndTime:"2029-08-27",
+      Description:"DPI= 2.80,NPV=71.0, VC=59.2",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1693,
+      Name:"MGD-30",
+      StartTime:"2027-12-25",
+      EndTime:"2028-04-13",
+      Description:"DPI= 2.37,NPV=67.1, VC=52.4",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1696,
+      Name:"MGP-33",
+      StartTime:"2029-09-05",
+      EndTime:"2029-12-24",
+      Description:"DPI= 2.65,NPV=73.9, VC=60.4",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1697,
+      Name:"MGD-34",
+      StartTime:"2023-04-30",
+      EndTime:"2023-08-02",
+      Description:"DPI= 2.68,NPV=127.4, VC=104.6",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1700,
+      Name:"MGP-39",
+      StartTime:"2028-10-15",
+      EndTime:"2029-03-04",
+      Description:"DPI= 2.82,NPV=101.4, VC=84.7",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1702,
+      Name:"NPWL_07B",
+      StartTime:"2022-11-14",
+      EndTime:"2023-01-05",
+      Description:"DPI= 2.56,NPV=24.6, VC=19.9",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1712,
+      Name:"NPWR_06A",
+      StartTime:"2024-07-24",
+      EndTime:"2024-09-04",
+      Description:"DPI= 1.70,NPV=8.3, VC=4.7",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1719,
+      Name:"NPP-34",
+      StartTime:"2027-01-06",
+      EndTime:"2027-03-23",
+      Description:"DPI= 1.93,NPV=39.5, VC=26.8",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1720,
+      Name:"NPP-35",
+      StartTime:"2025-05-19",
+      EndTime:"2025-08-27",
+      Description:"DPI= 1.58,NPV=33.3, VC=15.9",
+      RigName:"Krathong (J)",
+      ScenarioID:388,
+      ConsultantID:2
+    },
+    {
+      ID:1734,
+      Name:"NPWA_05B",
+      StartTime:"2024-05-29",
+      EndTime:"2024-06-26",
+      Description:"DPI= 1.92,NPV=8.4, VC=5.7",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1735,
+      Name:"NPWA_04C",
+      StartTime:"2027-12-06",
+      EndTime:"2027-12-29",
+      Description:"DPI= 1.57,NPV=3.3, VC=1.6",
+      RigName:"Krathong (J)",
+      ScenarioID:388,
+      ConsultantID:2
+    },
+    {
+      ID:1736,
+      Name:"NPWB_06A",
+      StartTime:"2023-07-31",
+      EndTime:"2023-09-02",
+      Description:"DPI= 1.96,NPV=11.2, VC=7.7",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1737,
+      Name:"NPWB_15B",
+      StartTime:"2027-05-09",
+      EndTime:"2027-07-29",
+      Description:"DPI= 1.63,NPV=12.7, VC=6.6",
+      RigName:"Krathong (J)",
+      ScenarioID:388,
+      ConsultantID:2
+    },
+    {
+      ID:1743,
+      Name:"NPWG_08B",
+      StartTime:"2023-08-31",
+      EndTime:"2023-10-18",
+      Description:"DPI= 2.68,NPV=26.3, VC=21.6",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1744,
+      Name:"NPWG_03C",
+      StartTime:"2027-11-17",
+      EndTime:"2027-12-07",
+      Description:"DPI= 1.51,NPV=2.4, VC=1.0",
+      RigName:"Krathong (J)",
+      ScenarioID:388,
+      ConsultantID:2
+    },
+    {
+      ID:1754,
+      Name:"PAD-15",
+      StartTime:"2026-07-17",
+      EndTime:"2026-11-19",
+      Description:"DPI= 2.49,NPV=89.6, VC=71.5",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1758,
+      Name:"NPWQ_08A",
+      StartTime:"2026-03-15",
+      EndTime:"2026-05-02",
+      Description:"DPI= 2.33,NPV=16.3, VC=12.6",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1763,
+      Name:"PAD-14",
+      StartTime:"2024-08-10",
+      EndTime:"2024-12-13",
+      Description:"DPI= 1.58,NPV=37.1, VC=18.1",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1767,
+      Name:"PAP-26",
+      StartTime:"2026-10-09",
+      EndTime:"2027-02-23",
+      Description:"DPI= 1.64,NPV=35.6, VC=18.9",
+      RigName:"Krathong (J)",
+      ScenarioID:388,
+      ConsultantID:2
+    },
+    {
+      ID:1772,
+      Name:"PAWB_09C",
+      StartTime:"2025-05-21",
+      EndTime:"2025-07-20",
+      Description:"DPI= 1.95,NPV=18.7, VC=12.8",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:1775,
+      Name:"PAWC_14C",
+      StartTime:"2022-12-28",
+      EndTime:"2023-03-25",
+      Description:"DPI= 2.08,NPV=30.5, VC=22.1",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:2501,
+      Name:"NPWU_05A",
+      StartTime:"2024-06-24",
+      EndTime:"2024-07-26",
+      Description:"DPI= 2.99,NPV=18.6, VC=15.8",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:2522,
+      Name:"NPD-65",
+      StartTime:"2023-10-31",
+      EndTime:"2024-01-30",
+      Description:"DPI= 2.16,NPV=71.1, VC=52.8",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:4270,
+      Name:"NPD-65RA",
+      StartTime:"2028-04-11",
+      EndTime:"2028-05-26",
+      Description:"DPI= 2.84,NPV=18.0, VC=15.0",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:4286,
+      Name:"NPWI_05B",
+      StartTime:"2025-07-31",
+      EndTime:"2025-08-30",
+      Description:"DPI= 1.75,NPV=6.2, VC=3.7",
+      RigName:"Chao Phraya (J)",
+      ScenarioID:388,
+      ConsultantID:1
+    },
+    {
+      ID:4314,
+      Name:"PAWC_12D",
+      StartTime:"2027-03-05",
+      EndTime:"2027-05-19",
+      Description:"DPI= 2.00,NPV=17.4, VC=12.2",
+      RigName:"Krathong (J)",
+      ScenarioID:388,
+      ConsultantID:2
+    },
+  ];
 
 export let scheduleData: Record<string, any>[] = [
   {
@@ -5180,7 +5603,6 @@ export let hospitalData: Record<string, any>[] = [
     ConsultantID: 5,
     DepartmentName: 'GENERAL',
   },
-  
 ];
 
 export let waitingList: Record<string, any>[] = [

@@ -1,5 +1,6 @@
 import { Component, ViewEncapsulation, Inject, ViewChild } from '@angular/core';
-import { hospitalData, waitingList } from './data';
+import { hospitalData, waitingList, scheduleConstraintWSOData } from './data';
+
 import {
   extend,
   closest,
@@ -42,64 +43,46 @@ export class AppComponent {
 
   public isTreeItemDropped = false;
   public draggedItemId = '';
+
   public data: Record<string, any>[] = extend(
     [],
-    hospitalData,
+    scheduleConstraintWSOData,
     null,
     true
   ) as Record<string, any>[];
   public selectedDate: Date = new Date(2021, 7, 2);
-  public monthInterval: number = 48;
+  public monthInterval: number = 60;
   public workHours: WorkHoursModel = { start: '08:00', end: '18:00' };
 
   public consultantDataSource: Record<string, any>[] = [
     {
-      Text: 'Alice',
+      Text: 'Chao Phraya (J)',
       Id: 1,
       GroupId: 1,
       Color: '#bbdc00',
       Designation: 'Cardiologist',
     },
     {
-      Text: 'Nancy',
+      Text: 'Krathong (J)',
       Id: 2,
       GroupId: 2,
       Color: '#9e5fff',
       Designation: 'Orthodontist',
     },
     {
-      Text: 'Robert',
+      Text: 'T-18 (T)',
       Id: 3,
       GroupId: 1,
       Color: '#bbdc00',
       Designation: 'Optometrist',
     },
-    {
-      Text: 'Robson',
-      Id: 4,
-      GroupId: 2,
-      Color: '#9e5fff',
-      Designation: 'Periodontist',
-    },
-    {
-      Text: 'Laura',
-      Id: 5,
-      GroupId: 1,
-      Color: '#bbdc00',
-      Designation: 'Orthopedic',
-    },
-    {
-      Text: 'Margaret',
-      Id: 6,
-      GroupId: 2,
-      Color: '#9e5fff',
-      Designation: 'Endodontist',
-    },
   ];
+
   public group: GroupModel = {
     enableCompactView: false,
     resources: ['Consultants'],
   };
+
   public allowMultiple = false;
   public eventSettings: EventSettingsModel = {
     dataSource: this.data,
@@ -143,6 +126,7 @@ export class AppComponent {
   public getConsultantImageName(value: ResourceDetails): string {
     return this.getConsultantName(value).toLowerCase();
   }
+
   public onItemDragStop(event: any): void {
     let overlapEvent = this.scheduleObj.eventBase
       .filterEvents(event.data.StartTime, event.data.EndTime)
@@ -262,9 +246,9 @@ export class AppComponent {
             Name: filteredData[0].Name,
             StartTime: cellData.startTime,
             EndTime: cellData.endTime,
-            IsAllDay: cellData.isAllDay,
+            /*IsAllDay: cellData.isAllDay,*/
             Description: filteredData[0].Description,
-            DepartmentID: resourceDetails.resourceData.GroupId,
+            /*DepartmentID: resourceDetails.resourceData.GroupId,*/
             ConsultantID: resourceDetails.resourceData.Id,
           };
           this.scheduleObj.openEditor(eventData, 'Add', true);
