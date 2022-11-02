@@ -60,21 +60,21 @@ export class AppComponent {
       Id: 1,
       GroupId: 1,
       Color: '#bbdc00',
-      Designation: 'Cardiologist',
+      Designation: '',
     },
     {
       Text: 'Krathong (J)',
       Id: 2,
       GroupId: 2,
       Color: '#9e5fff',
-      Designation: 'Orthodontist',
+      Designation: '',
     },
     {
       Text: 'T-18 (T)',
       Id: 3,
-      GroupId: 1,
+      GroupId: 3,
       Color: '#bbdc00',
-      Designation: 'Optometrist',
+      Designation: '',
     },
   ];
 
@@ -87,10 +87,10 @@ export class AppComponent {
   public eventSettings: EventSettingsModel = {
     dataSource: this.data,
     fields: {
-      subject: { title: 'Patient Name', name: 'Name' },
-      startTime: { title: 'From', name: 'StartTime' },
-      endTime: { title: 'To', name: 'EndTime' },
-      description: { title: 'Reason', name: 'Description' },
+      subject: { title: 'Project Name', name: 'Name' },
+      startTime: { title: 'Project Start Date', name: 'StartTime' },
+      endTime: { title: 'Drilling End Date', name: 'EndTime' },
+      description: { title: 'Description', name: 'Description' },
     },
   };
 
@@ -157,6 +157,7 @@ export class AppComponent {
       event.data.EndTime = new Date(event.data.StartTime.getTime() + timeDiff);
       this.scheduleObj.saveEvent(overlapEvent, 'Save');
       startTime = event.data.EndTime;
+
       for (let i = 0; i < eventsToBeReschedule.length; i++) {
         let timeDiff =
           eventsToBeReschedule[i].EndTime - eventsToBeReschedule[i].StartTime;
