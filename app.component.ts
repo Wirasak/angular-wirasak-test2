@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation, Inject, ViewChild } from '@angular/core';
-import { hospitalData, waitingList, scheduleConstraintWSOData } from './data';
+import { watingProjectListWSOData, scheduleConstraintWSOData } from './data';
 
 import {
   extend,
@@ -94,11 +94,15 @@ export class AppComponent {
     },
   };
 
-  public field: Record<string, any> = {
-    dataSource: waitingList,
-    id: 'Id',
+  public field: Object = {
+    dataSource: watingProjectListWSOData,
+    id: 'id',
+    parentID: 'pid',
     text: 'Name',
+    hasChildren: 'hasChild',
+    selected: 'isSelected',
   };
+
   public allowDragAndDrop = true;
 
   constructor() {}

@@ -1,9 +1,36 @@
 <div class="control-section">
   <div class="drag-sample-wrapper">
+    <div class="treeview-container">
+      <div class="title-container">
+        <h1 class="title-text">Waiting List</h1>
+      </div>
+      <ejs-treeview
+        #treeObj
+        [fields]="field"
+        cssClass="treeview-external-drag"
+        dragArea=".drag-sample-wrapper"
+        [allowDragAndDrop]="allowDragAndDrop"
+        (nodeDragStop)="onTreeDragStop($event)"
+        (nodeDragging)="onItemDrag($event)"
+      >
+        <ng-template #nodeTemplate let-data>
+          <div id="waiting">
+            <div id="waitdetails">
+              <div id="waitlist">{{ data.Name }}</div>
+              <div id="waitcategory">
+                {{ data.Description }}
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ejs-treeview>
+    </div>
+
     <div class="schedule-container">
       <div class="title-container">
         <h1 class="title-text">Rig Scheduling</h1>
       </div>
+
       <ejs-schedule
         #scheduleObj
         cssClass="schedule-drag-drop"
@@ -40,35 +67,10 @@
           ></e-view>
         </e-views>
         <e-header-rows>
-        <e-header-row option="Year"> </e-header-row>
+          <e-header-row option="Year"> </e-header-row>
           <e-header-row option="Month"> </e-header-row>
         </e-header-rows>
       </ejs-schedule>
-    </div>
-    <div class="treeview-container">
-      <div class="title-container">
-        <h1 class="title-text">Waiting List</h1>
-      </div>
-      <ejs-treeview
-        #treeObj
-        [fields]="field"
-        cssClass="treeview-external-drag"
-        dragArea=".drag-sample-wrapper"
-        [allowDragAndDrop]="allowDragAndDrop"
-        (nodeDragStop)="onTreeDragStop($event)"
-        (nodeDragging)="onItemDrag($event)"
-      >
-        <ng-template #nodeTemplate let-data>
-          <div id="waiting">
-            <div id="waitdetails">
-              <div id="waitlist">{{ data.Name }}</div>
-              <div id="waitcategory">
-                {{ data.DepartmentName }} - {{ data.Description }}
-              </div>
-            </div>
-          </div>
-        </ng-template>
-      </ejs-treeview>
     </div>
   </div>
 </div>
